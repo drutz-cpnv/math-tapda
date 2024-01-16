@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    background-color: #0652dd;
+    height: 100vh;
+    width: 100%;
+    font-family: "JetBrains Mono", monospace;
+    color: #174ad4;
+}
+
+svg {
+    border: 1px solid #9e9e9f;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    width: fit-content;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 0 5px #191919;
+    border: 1px solid #9e9e9f;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+        box-shadow: 5px 5px 0 2px #191919;
+    }
+
+    &.success {
+        box-shadow:
+                5px 5px 0 2px #191919,
+                5px 5px 100px 500px rgba(0, 255, 0, 0.28)
+        ;
+    }
+}
+
+input[type=range] {
+    accent-color: #ff9d65;
+    display: none;
+    cursor: move;
+    margin-right: 1rem;
+}
+
+.form-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+.form-input input[type=text] {
+    color: #ff9d65;
+    font-size: 15px;
+    font-family: "JetBrains Mono", monospace;
+    background: none;
+    border: none;
+    text-align: right;
+    width: 1.7rem;
+}
+
+output {
+    color: #ff9d65;
+
+    &:hover input {
+        display: inline;
+    }
+}

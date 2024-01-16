@@ -1,11 +1,51 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Tapda</title>
-    <script type="module" src="/main.js" defer></script>
-  </head>
-  <body>
-  </body>
+    <script defer src="/main.js" type="module"></script>
+</head>
+<body class="grid">
+<img src="drz.svg" alt="" class="w-8 absolute top-10 left-10">
+<div class="container h-fit place-self-center">
+    <svg height="600" id="svg" style="border-radius: 10px" width="800"></svg>
+    <div>
+        <div class="form-input range">
+            <label for="angleInput">réglage angle de tir du disque</label>
+            <output>(<input id="angleInput" type="range" value="45"><span class="value">45</span>deg)</output>
+        </div>
+        <div class="form-input range">
+            <label for="angleInput2">réglage angle de tir</label>
+            <output>(<input id="angleInput2" type="range" value="30"><span class="value">30</span>deg)</output>
+        </div>
+        <div class="form-input range">
+            <label for="reactionTime">Temps de réaction</label>
+            <output>(<input id="reactionTime" type="text" value="2">s)</output>
+        </div>
+        <div class="form-input range">
+            <label for="speed">Vitesse initiale</label>
+            <output>(<input id="speed" type="text" value="40">)</output>
+        </div>
+        <div class="form-input range">
+            <label for="adjustment">Tolérance</label>
+            <output>(<input id="adjustment" type="text" value="10"> points)</output>
+        </div>
+        <div class="form-input">
+            <span>Temps</span>
+            <output id="time">0</output>
+        </div>
+        <div class="form-input">
+            <span>Position du disque en X</span>
+            <output id="discX">0</output>
+        </div>
+        <div class="form-input">
+            <span>Position du disque en Y</span>
+            <output id="discy">0</output>
+        </div>
+    </div>
+</div>
+
+<!--<canvas height="1000" id="demo" width="1400"></canvas>-->
+</body>
 </html>
